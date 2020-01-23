@@ -1,0 +1,90 @@
+$backColor: #353535;
+$bgwhite: #fff;
+$progressBg: #b2d7e6;
+$progressred: #ff0000;
+$buttonbg: #e8e8e8;
+$flexbox: flex;
+$overflowbox: hidden;
+$centeralign: center;
+
+
+
+
+body {
+    background: $backColor;
+}
+.mainOuter {
+    background: $bgwhite;
+    padding: 30px 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    box-sizing: border-box;
+}
+.mainOuter h1.headingTitle {
+    margin: 0 0 20px;
+}
+.progress-wrap, .progress-bar {
+    height: 40px;
+    position: relative;
+}
+.progress-wrap {
+    margin-bottom: 15px;
+    overflow: $overflowbox;
+    border: 1px solid #bdbdbd;
+}
+.progress-bar {
+    background: $progressBg;
+    width: 0;
+    transition: width 1s;
+}
+.progress-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: $flexbox;
+    height: 100%;
+    justify-content: $centeralign;
+    align-items: $centeralign;
+    font-size: 19px;
+    font-weight: 500;
+}
+.progress-wrap .redc {
+  background: $progressred !important;
+}
+.flexRow {
+    display: $flexbox;
+}
+.flexRow div#selecltBox select#progress_bar {
+    padding: 3px;
+    background: $buttonbg;
+    border: 1px solid #9a9696;
+}
+.flexRow div#selecltBox {
+    margin-right: 10px;
+}
+.flexRow div#btns button {
+    margin-right: 10px;
+    background: $buttonbg;
+    border: 1px solid #a0a0a0;
+    padding: 3px 7px;
+}
+
+/*==== Responsive here ====*/
+@media (max-width:400px){
+.mainOuter {
+    width: 85%;
+}
+.mainOuter {
+    padding: 30px 20px;
+    width: 85%;
+}
+.flexRow div#btns button {
+    margin-right: 5px;
+}
+.mainOuter h1.headingTitle {
+    font-size: 26px;
+}
+}
